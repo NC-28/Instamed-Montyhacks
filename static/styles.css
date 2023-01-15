@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+}
+/* Layout */
+/* .banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+} */
+.banner{
+    background:url(../static/background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247),#ffaaaa),url(background.jpg);
+    background-attachment: fixed;
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+.fixednavbar{
+    width: 100%;
+    height: 100px;
+    background: #302c2c;
+    color: rgb(2, 2, 2);
+    top: 18px;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-bottom: 5px #ffaaaa solid;
+    z-index: 10;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+.navbar ul li{
+    font-size: 110%;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffaaaa;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+/* Homepage */
+
+.homepage{
+    width: 100%;
+    position: static;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+.homepage h1{
+    font-weight: bold;
+    font-size: 70px;
+    margin-top: 33%;
+    
+    /* text-decoration: underline #ffaaaa; */
+}
+.homepage p{
+    margin: 35px auto;
+    font-weight: 100;
+    font-size: 24px;
+    /* line-height: 25px; */
+}
+.homepage button{
+    background-color:#ffbfbf;
+    border-color: white;
+    position:relative;
+    margin-left:0;
+    margin-bottom: 0%;
+    /* align-self: center; */
+}
+
+.homepage span{
+    background-color: white;
+}
+button{
+    /* align-self: center; */
+    margin-left: 25%;
+    width: 50%;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 28px;
+    font-weight: bold;
+    border: 2px solid #ffaaaa;
+    background: #fafafa;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+span{
+    background: #ffaaaa;
+    height: 100%;
+    width: 0;
+    border-radius: 28px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.htextbox{
+    margin-top: 25px;
+    margin: 0px;
+    width: 100%;
+    height: 700px;
+    background: #ffffffe5;
+    color: black;
+    left: 0%;
+    position: absolute;
+    box-sizing: border-box;
+    border-top: 5px #ffaaaa solid;
+    border-top: 5px #ffaaaa solid;
+}
+.htextbox h1{
+    margin-top: 7%;
+    margin-right: 50%;
+    margin-left: 7%;
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffaaaa;
+    display: inline-block;
+}
+.htextbox p{
+    margin-left: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 24px;
+    display: flex;
+    margin-right: 50%;
+    overflow-wrap:initial;
+}
+.htextbox h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
+}
+.himg1{
+    width: 40%;
+    position: absolute;
+    border: 5px #ffaaaa solid;;
+    float: right;
+    margin-top: 7%;
+}
+.htextbox img{
+    margin-right: 7%;
+    margin-left: 55%;
+}
+.himg2{
+    border: 5px rgba(0, 0, 0, 0.342) solid;;
+    width: 40%;
+    position: absolute;
+    float: left;
+    margin-left: 7%;
+    margin-top: 10%;
+}
+.htextbox2{
+    margin-top: 700px;
+    width: 100%;
+    height: 700px;
+    background: #ffaaaad7;
+    color: black;
+    left: 0%;
+    box-sizing: border-box;
+    border: 5px #ffaaaa solid;
+    position:absolute;
+}
+.htextbox2 h1{
+    margin-top: 10%;
+    margin-right: 7%;
+    margin-left: 50%;
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffffffe0;
+}
+.htextbox2 button{
+    background-color:#ffbfbf;
+    border-color: white;
+}
+.htextbox2 span{
+    background-color: white;
+}
+.htextbox2 p{
+    margin-left: 50%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 24px;
+    display: flex;
+    margin-right: 7%;
+    overflow-wrap:initial;
+}
+.htextbox2 h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
+}
+
+/* this is htextbox3 */
+.htextbox3{
+    width: 100%;
+    height: 250px;
+    margin-top: 1400px;
+    background: #ffffffbe;
+    color: black;
+    left: 0%;
+    box-sizing: border-box;
+    border: 5px #ffaaaa solid;
+    position:absolute;
+}
+.htextbox3 h1{
+    margin-right: 7%;
+    margin-left: 7%;
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffaaaa;
+}
+.htextbox3 p{
+    
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 18px;
+    
+    overflow-wrap:initial;
+}
+.htextbox3 h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
+}
+/* Locations Near Me */
+.bannerLocations{
+    background: black;
+    background-size: cover;
+    background-position: center;
+} 
+/* Medical Records */
+.bannerRecords{
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+/* Login */
+.bannerLogin{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;  
+}
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: white;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border: 2px #ffaaaa solid;
+}
+.h1login{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.loginbox p{
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 290px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+}
+.login-submit input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #ffaaaa;
+    color: black;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 2px solid #ffaaaa;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.login-submit span{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 70px;
+    background: #ffaaaa;
+    height: 40px;
+    width: absolute;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s
+}
+.login-submit:hover span{
+    width: 290px;
+}
+.login-submit:hover{
+    border:none;
+}
+/* Register */
+.bannerRegister{
+    background:url(../static/background.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+.registerbox{
+    margin-top: 125px;
+    margin-bottom: 100px;
+    width: 330px;
+    height: 825px;
+    background: white;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border: 2px #ffaaaa solid;
+}
+.h1register{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+.registerbox p{
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    font-weight: bold;
+}
+.registerbox input{
+    width: 290px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+.registerbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+}
+.register-submit input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #ffaaaa;
+    color: black;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 2px solid #ffaaaa;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.register-submit span{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 31px;
+    background: #ffaaaa;
+    height: 40px;
+    width: absolute;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s
+}
+.register-submit:hover span{
+    width: 290px;
+}
+.register-submit:hover{
+    border:none;
+}
+.register-submit input[type="date"] {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.dropdowntype{
+    width: 290px;
+    margin-left: 15px;
+    position: center;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* Location Textbox */
+
+.htextboxa{
+    margin-top: 25px;
+    margin: 100px;
+    width: 30%;
+    margin-left: 7%;
+    height: 85%;
+    background: #ffffff;
+    color: black;
+    left: 0%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 5px #ffaaaa solid;
+}
+.htextboxa h1{
+    margin-top: 20%;
+    margin-right: 7%;
+    margin-left: 7%;
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffaaaa;
+}
+.htextboxa img{
+    float: right;
+    margin-left: 3%;
+    display: flex;
+    margin-right: 7%;
+}
+.htextboxa p{
+    margin-left: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 32px;
+    display: flex;
+    margin-right: 7%;
+    overflow-wrap:initial;
+}
+.htextboxa h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
+}
+.htextboxb{
+    margin-top:15%;
+    width: 100%;
+    margin-right: 60%;;
+    background: #ffffffd7;
+    color: black;
+    left: 0%;
+    position: absolute;
+    box-sizing: border-box;
+    border-top: 5px #ffaaaa solid;
+    border-top: 5px #ffaaaa solid;
+}
+.htextboxb h1{
+    text-align: center;
+    color: #000000f3;
+    font-weight: none;
+    font-size: 40px;
+    text-decoration: underline #ffaaaa;
+}
+.htextboxb img{
+    float: right;
+    margin-left: 3%;
+    display: flex;
+    margin-right: 7%;
+}
+.htextboxb p{
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight:lighter;
+    font-size: 24px;
+    overflow-wrap:initial;
+}
+.htextboxb h6{
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: center;
+    color: #2c2c2cf3;
+    font-weight: bold;
+    font-size: 20px;
+    overflow-wrap:initial;
+}
+.map {
+    position: relative;
+    height: 1500%;
+    width: 100%;
+  }
+  .mapcover{
+    margin-top: 100px;
+    float: right;
+    margin-left: 40%;
+    height: 49px;
+    width: 55%;
+    left: 0;
+    background: #ffffff;
+    position: absolute;
+}
+.mapcover h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: #000000;
+    text-decoration: underline #ffaaaa;
+}
+
+.adminbox{
+    margin-top: 500px;
+    width: 50%;
+    height: 1450px;
+    background: white;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border: 5px #ffaaaa solid;
+}
+.h1admin{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+.adminbox p{
+    margin: 0;
+    margin-left: 10%;
+    padding: 0;
+    font-weight: bold;
+}
+.adminbox input{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 25px;
+}
+.adminbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+}
+.admin-submit input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #ffaaaa;
+    color: black;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 2px solid #ffaaaa;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.admin-submit span{
+    margin-left: 10%;
+    margin-right: 15px;
+    margin-bottom: 31px;
+    background: #ffaaaa;
+    height: 50px;
+    width: absolute;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s
+}
+.admin-submit:hover span{
+    width: 80%;
+}
+.admin-submit:hover{
+    border:none;
+}
+.table{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width:70%;
+    border-top: 2px #ffaaaa solid;
+
+}
+.tableheader{
+    font-size: 25px;
+    text-decoration:  underline#ffaaaa;
+}
+.tablemain{
+    margin: 30%;
+    font-size: 20px;
+}

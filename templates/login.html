@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log-In
+{% endblock %}
+
+{% block main %}
+    <head>
+        <link href="/static/styles.css" rel="stylesheet">
+
+    </head>
+    <body class= "banner">
+        <div class="loginbox">
+            <br>
+            <h1 class= "h1login">Account Log-In</h1>
+            <br>
+            <form action = "/login" method = "post">
+                <p>Username:</p>
+                <input type="text" name="username" autocomplete = "off" placeholder="Username">
+                <p>Password:</p>
+                <input type="password" name="password" autocomplete = "off" placeholder="Password" />
+                <div class="login-submit">
+                    <input type="submit" name="" value="Login"/>
+                    <span></span> 
+                </div>
+            </form>
+        </div>
+    </body>
+{% endblock %}
+
+
+<!-- study jinja using cs50
+create a log-in page for users to log in including a form for username and password plus a button for submitting the user input -->
